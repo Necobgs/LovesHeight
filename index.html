@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu amor por você</title>
+    <style>
+        body {
+            height: 150vh; /* Inicialize com uma altura maior que a janela de visualização */
+        }
+    </style>
+</head>
+<style>
+    body{
+        background-color: rgb(197, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+        
+    p{
+        padding: 20%;
+        color: white;
+    }
+</style>
+
+<body>
+
+    <p style="font-size: 30px;">Meu amor por você acaba quando você chegar no final dessa página!</p>
+
+<script>
+    window.addEventListener('scroll', function () {
+        var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
+        // Ajuste esse valor conforme necessário para acionar o aumento da página
+        var triggerPoint = 0.8; 
+
+        // Verifique se o usuário está perto do final da página
+        if ((scrollPosition / (document.body.scrollHeight - window.innerHeight)) > triggerPoint) {
+            // Aumente dinamicamente a altura da página
+            document.body.innerHTML = document.body.innerHTML + "<p>❤</p>"  
+            document.body.style.height = (100 + scrollPosition / window.innerHeight * 100) + 'vh';
+             
+        }
+    });
+</script>
+
+</body>
+</html>
